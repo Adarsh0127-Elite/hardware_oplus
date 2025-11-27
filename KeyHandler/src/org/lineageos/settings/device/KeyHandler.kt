@@ -55,7 +55,10 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
             IntentFilter(AudioManager.STREAM_MUTE_CHANGED_ACTION)
         )
     }
-
+    // Required by new AOSP/Lineage interface
+    override fun onPocketStateChanged(inPocket: Boolean) {
+        // No-op (not used on this device)
+    }
     override fun handleKeyEvent(event: KeyEvent): KeyEvent? {
         if (event.action != KeyEvent.ACTION_DOWN) {
             return event
