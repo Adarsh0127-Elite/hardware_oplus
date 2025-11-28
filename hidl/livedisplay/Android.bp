@@ -52,8 +52,8 @@ cc_binary {
     }),
     relative_install_path: "hw",
     srcs: [
-        ":vendor.lineage.livedisplay@2.0-sdm-pa",
-        ":vendor.lineage.livedisplay@2.0-sdm-utils",
+        ":vendor.lineage.livedisplay-sdm-pa",
+        ":vendor.lineage.livedisplay-sdm-utils",
         ":vendor.lineage.livedisplay@2.1-oplus-af",
         ":vendor.lineage.livedisplay@2.1-oplus-dm",
         ":vendor.lineage.livedisplay@2.1-oplus-se",
@@ -64,12 +64,12 @@ cc_binary {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.livedisplay@2.0",
-        "vendor.lineage.livedisplay@2.1",
+        "vendor.lineage.livedisplay",
+        "vendor.lineage.livedisplay",
     ],
     header_libs: [
         "kernel_headers.oplus",
-        "vendor.lineage.livedisplay@2.0-sdm-headers",
+        "vendor.lineage.livedisplay-sdm-headers",
         "vendor.lineage.livedisplay@2.1-oplus-headers",
     ],
     cflags: select(soong_config_variable("OPLUS_LINEAGE_LIVEDISPLAY_HAL", "ENABLE_AF"), {
